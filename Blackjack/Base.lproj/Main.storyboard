@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blackjack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dealer draws to 16 and stands on 17" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccB-SF-kT0">
+                                <rect key="frame" x="0.0" y="411" width="768" height="31"/>
+                                <color key="textColor" red="0.00075603836939999996" green="0.26625951780000001" blue="0.0011730623679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zxo-w6-Ar5" userLabel="Buttons">
+                                <rect key="frame" x="0.0" y="898.5" width="768" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-9u-EcU">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="46"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                        <state key="normal" title="HIT"/>
+                                        <connections>
+                                            <action selector="buttonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YzY-IA-8zf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8U-Rd-Nnd">
+                                        <rect key="frame" x="409" y="0.0" width="359" height="46"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                        <state key="normal" title="STAND"/>
+                                        <connections>
+                                            <action selector="buttonStand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9U-Zg-tng"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRV-7s-aKM" userLabel="playerScore">
+                                <rect key="frame" x="326.5" y="766.5" width="115" height="39"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-C0-htW" userLabel="dealerScore">
+                                <rect key="frame" x="326.5" y="367.5" width="115" height="39"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-e0-jV9">
+                                <rect key="frame" x="230.5" y="450.5" width="307" height="307.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10C" translatesAutoresizingMaskIntoConstraints="NO" id="Psp-UD-I8P" userLabel="playerCard">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="307.5"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzd-n1-ULt">
+                                <rect key="frame" x="269" y="953.5" width="230" height="39"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="buttonReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kly-Yr-h8K"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzZ-fQ-bLv">
+                                <rect key="frame" x="261" y="827" width="246" height="56"/>
+                                <color key="textColor" red="0.55295296889270051" green="0.65833201142131981" blue="0.015111416802146255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pgA-Xh-w4G" userLabel="dealerCard">
+                                <rect key="frame" x="230.5" y="51" width="307" height="307.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10C" translatesAutoresizingMaskIntoConstraints="NO" id="meP-Bm-pva" userLabel="dealerCard">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="307.5"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0017836181289825927" green="0.57586453045685282" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wzd-n1-ULt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.9" id="0VB-k0-H8D"/>
+                            <constraint firstItem="pzZ-fQ-bLv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.055" id="27j-d0-oTS"/>
+                            <constraint firstItem="NRV-7s-aKM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="4MN-vU-1Rc"/>
+                            <constraint firstItem="pgA-Xh-w4G" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="C1e-Gx-qP4"/>
+                            <constraint firstItem="Zxo-w6-Ar5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H8c-xf-r8L"/>
+                            <constraint firstItem="8Za-e0-jV9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="HYd-MM-Lbd"/>
+                            <constraint firstItem="CV6-C0-htW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.756" id="JRa-HM-Klv"/>
+                            <constraint firstItem="8Za-e0-jV9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="LKg-LU-jK8"/>
+                            <constraint firstItem="Wzd-n1-ULt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.038" id="MTD-Uk-ed4"/>
+                            <constraint firstItem="8Za-e0-jV9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.18" id="NJu-Dt-ylD"/>
+                            <constraint firstItem="Wzd-n1-ULt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RwD-En-C1M"/>
+                            <constraint firstItem="pgA-Xh-w4G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.4" id="SBE-00-R7c"/>
+                            <constraint firstItem="NRV-7s-aKM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.038" id="Sb0-HZ-iR5"/>
+                            <constraint firstItem="Zxo-w6-Ar5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="U5d-1l-DcG"/>
+                            <constraint firstItem="pzZ-fQ-bLv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.67" id="VrR-KW-Dta"/>
+                            <constraint firstItem="NRV-7s-aKM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAk-5z-nqA"/>
+                            <constraint firstItem="8Za-e0-jV9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YPi-IV-PBZ"/>
+                            <constraint firstItem="NRV-7s-aKM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.535" id="ZCg-ro-sUd"/>
+                            <constraint firstItem="pgA-Xh-w4G" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="ZZT-th-1b1"/>
+                            <constraint firstItem="ccB-SF-kT0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aXZ-2v-dUt"/>
+                            <constraint firstItem="CV6-C0-htW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eys-wq-Bsa"/>
+                            <constraint firstItem="pgA-Xh-w4G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kso-GH-isb"/>
+                            <constraint firstItem="Wzd-n1-ULt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="nJY-cV-csS"/>
+                            <constraint firstItem="Zxo-w6-Ar5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.045" id="o8K-m0-Io9"/>
+                            <constraint firstItem="ccB-SF-kT0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="r9F-bx-99h"/>
+                            <constraint firstItem="pzZ-fQ-bLv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rHv-Yt-x9u"/>
+                            <constraint firstItem="CV6-C0-htW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.038" id="rjk-mX-aQi"/>
+                            <constraint firstItem="Zxo-w6-Ar5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.8" id="ugl-NA-LnF"/>
+                            <constraint firstItem="ccB-SF-kT0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.03" id="vmQ-dF-c9s"/>
+                            <constraint firstItem="ccB-SF-kT0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.833" id="wGy-PA-3R4"/>
+                            <constraint firstItem="CV6-C0-htW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="xcq-51-Xut"/>
+                            <constraint firstItem="pzZ-fQ-bLv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.32" id="ziI-uh-IeQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonHit" destination="eEW-9u-EcU" id="OTa-Q3-m3w"/>
+                        <outlet property="buttonStand" destination="i8U-Rd-Nnd" id="p7z-03-cdz"/>
+                        <outlet property="dealerCard" destination="meP-Bm-pva" id="JqQ-mC-BLk"/>
+                        <outlet property="dealerScore" destination="CV6-C0-htW" id="zti-ZF-6YO"/>
+                        <outlet property="playerCard" destination="Psp-UD-I8P" id="7XS-kQ-lKM"/>
+                        <outlet property="playerScore" destination="NRV-7s-aKM" id="u3I-IS-Cpb"/>
+                        <outlet property="result" destination="pzZ-fQ-bLv" id="IW8-nW-Izd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="10C" width="691" height="1056"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+</document>
